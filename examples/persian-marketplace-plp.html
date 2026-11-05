@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لیست محصولات — الگوی PLP فارسی</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<style>
+:root{--bg:#fff;--surface:#f1f2f4;--border:#e0e0e6;--muted:#62666d;--primary:#ef4056}
+*{box-sizing:border-box}body{margin:0;font-family:"Vazirmatn","Tahoma",sans-serif;line-height:1.9;background:#fff}
+.container{max-width:1440px;margin-inline:auto;padding-inline:16px}
+header{position:sticky;top:0;background:#fff;border-block-end:1px solid var(--border);z-index:20}
+.topbar{display:flex;gap:12px;align-items:center;padding-block:12px}
+.logo{font-weight:800;color:var(--primary);font-size:20px}
+.search{flex:1;background:var(--surface);border-radius:12px;padding:8px 12px;display:flex;gap:8px}
+.search input{flex:1;border:0;background:transparent;outline:none;font:inherit}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:16px;margin-block:16px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.filters{display:none}}
+.filters{border:1px solid var(--border);border-radius:12px;padding:16px;height:fit-content;position:sticky;top:120px}
+.filters h3{font-size:14px;margin:12px 0 8px}.filters label{display:flex;gap:8px;font-size:13px;margin-block:6px}
+.sortbar{display:flex;gap:12px;font-size:13px;border-block-end:1px solid var(--border);padding-block-end:8px;margin-block-end:12px;overflow-x:auto;white-space:nowrap}
+.sortbar .active{color:var(--primary);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{border:1px solid var(--border);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.card .img{aspect-ratio:1;background:var(--surface);border-radius:8px;display:grid;place-items:center;font-size:32px}
+.title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;min-height:44px}
+.off{background:var(--primary);color:#fff;font-size:12px;border-radius:6px;padding:0 6px}
+.old{color:var(--muted);text-decoration:line-through;font-size:12px}.new{font-weight:800}
+</style>
+</head>
+<body>
+<header><div class="container"><div class="topbar"><div class="logo">فروشگاه نمونه</div><div class="search">🔍<input placeholder="جستجو — مثال: گوشی موبایل"></div><button>سبد خرید 🛒</button></div></div></header>
+<main class="container"><p style="font-size:12px;color:var(--muted)">خانه / موبایل / گوشی موبایل — ۲۱ کالا — مرتب‌سازی: <b>پرفروش‌ترین‌ها</b></p>
+<div class="layout">
+<aside class="filters"><h3>فیلترها</h3><label><input type="checkbox" checked> فقط موجود</label><label><input type="checkbox"> ارسال سریع</label><h3>برند</h3><label><input type="checkbox"> سامسونگ</label><label><input type="checkbox"> شیائومی</label><label><input type="checkbox"> اپل</label><h3>محدوده قیمت (تومان)</h3><input type="range" style="width:100%"><div style="font-size:12px">از ۱۰٬۰۰۰٬۰۰۰ تا ۸۰٬۰۰۰٬۰۰۰</div></aside>
+<div><div class="sortbar"><span class="active">پیشنهاد خریدارن</span><span>پربازدیدترین</span><span>پرفروش‌ترین‌ها</span><span>ارزان‌ترین</span><span>گران‌ترین</span><span>جدیدترین</span></div>
+<div class="grid" id="g"></div></div>
+</div></main>
+<script>
+const fa=n=>Number(n).toLocaleString('fa-IR');
+const d=[['گوشی موبایل سامسونگ Galaxy A55 حافظه 256',18500000,16900000,9,'📱'],['گوشی شیائومی Redmi Note 13 حافظه 256',12500000,11400000,9,'📱'],['گوشی آیفون 13 حافظه 128 نات اکتیو',42000000,39900000,5,'🍎'],['هدفون بلوتوثی انکر SoundCore R50i',3230000,2890000,10,'🎧'],['کپسول زینک پلاس فلکسان 60 عددی',1056000,108000,90,'💊'],['همزن دسینی مدل 268',3700000,3515000,5,'🥣'],['کرم آبرسان گلاما 50 میل',1600000,319000,80,'🧴'],['لپ‌تاپ ایسوس VivoBook i5 حافظه 512',38500000,35900000,7,'💻']];
+document.getElementById('g').innerHTML=d.concat(d).map(p=>`<div class="card"><div class="img">${p[4]}</div><p class="title">${p[0]}</p><div style="display:flex;gap:8px;align-items:center"><span class="off">${fa(p[3])}٪</span><del class="old">${fa(p[1])}</del></div><div class="new">${fa(p[2])} <small>تومان</small></div></div>`).join('');
+</script>
+</body>
+</html>
