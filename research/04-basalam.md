@@ -34,5 +34,8 @@
 - Footer cols: About (`مجله باسلام`, `درباره باسلام`, `قوانین و شرایط بازار`, `اکوسیستم سلام`) / Support (`تماس با ما`, `سوالات متداول`, `پیگیری سفارش‌ها`) / Buy-Sell (`فروش در باسلام`, `کیف پول من`, `مدیریت غرفه`) / Apps (`کافه‌بازار`, `مایکت`, `سیب‌اپ`).
 - Seals: Enamad, Samandehi, Qom STP. Email capture: `ایمیلت رو وارد کن تا از تخفیف‌ها باخبر بشی + ارسال`.
 
+## Verified live 2026-11-05 (Playwright)
+- PDP: `https://basalam.com/sepahi_online_sales/product/21026913` → title `خرید و قیمت همزن دسینی مدل 268 از غرفه سپاهی آنلاین`, h1 product, has chat + booth, CTAs: `افزودن به سبد`, `ایجاد غرفه`, `عضویت ورود`. Pattern: `خرید و قیمت {product} از غرفه {vendor}` + URL `/{vendor}/product/{id}`.
+
 ## AI prompt snippet
 > Build RTL social bazaar like Basalam: secondary nav (طلای آنلاین، خرید اعتباری، خرید عمده), icon campaign grid, product rails with غرفه name + chat button, booth page with گفت‌وگو CTA, trust strip (پرداخت امن، بازگشت وجه، ارتباط مستقیم). Warm tone, Vazirmatn, fa-IR prices.

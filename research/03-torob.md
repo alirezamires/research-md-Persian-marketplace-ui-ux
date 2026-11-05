@@ -38,5 +38,9 @@
 - `راهنمای خرید امن` page, `پیگیری سفارش / شکایت` flow `/feedback/complaints/1/`, verified shop badge.
 - No payment handling. Warn: `ترب واسط پرداخت نیست — پرداخت در فروشگاه انجام می‌شود`.
 
+## Verified live 2026-11-05 (Playwright)
+- Search: `https://torob.com/search/?query=گوشی موبایل` → title `لیست قیمت روز گوشی موبایل | ترب`, 52 cards `a[href*="/p/"]`, shops present.
+- PDP: `/p/8f9d4280-c8b2-46a3-9ead-47eb7fc2b452/` → title `خرید و قیمت گوشی آیفون 18 پرو ... | ترب`, h1 product, URL slug fa `گوشی-آیفون-18-پرو-...`, CTA `خرید از تکنو فون ۳۶۹٬۷۰۰٬۰۰۰ تومان` + `ارزان‌ترین` badge. Pattern: `خرید و قیمت {name} | ترب`.
+
 ## AI prompt snippet
 > Build RTL price-comparison page like Torob: centered search "مقایسه قیمت میلیون‌ها محصول", category links, results with "از {price} تومان", PDP as shop price-list sorted ارزان‌ترین with نمودار قیمت, outbound خرید buttons, no cart. Vazirmatn, fa-IR digits.

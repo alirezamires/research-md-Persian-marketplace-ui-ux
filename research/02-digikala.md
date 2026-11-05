@@ -56,5 +56,10 @@ AI spec:
 ## Promo tracking (keep for analytics parity)
 - All home links carry `promo_name, promo_position, promo_creative, bCode`. Preserve as `data-promo` attrs in AI output.
 
+## Verified live 2026-11-05 (Playwright)
+- PDP: `https://www.digikala.com/product/dkp-5487416/` → title `قیمت و خرید کپسول ژلاتینی نرم زینک پلاس فلکسان بسته 60 عددی`, h1 = product title, seller-box present (`فروشنده`), CTAs: `افزودن به سبد خرید` (repeated per variant), `مشاهده همه ویژگی‌ها`, `خرید اشتراک`.
+- PLP: `https://www.digikala.com/product-list/plp_458730933/?sort=7` → 21 cards `a[href*="/product/dkp-"]`, sort preserved in URL.
+- Header computed: `dir=rtl lang=fa font=Digikala bg=#fff`.
+
 ## AI prompt snippet
 > Build RTL Farsi marketplace homepage like Digikala: sticky header with logo+جستجو+ورود|ثبت‌نام+سبد خرید, mega-menu دسته‌بندی کالاها, hero slider, circular services, شگفت‌انگیزها countdown rail with discount cards (٪ badge, old/new تومان prices). Use Vazirmatn, fa-IR digits, logical CSS.
