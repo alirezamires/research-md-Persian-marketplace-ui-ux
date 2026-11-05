@@ -17,3 +17,6 @@ build/
 # Temp
 *.tmp
 *.log
+
+# Playwright MCP artifacts
+.playwright-mcp/
